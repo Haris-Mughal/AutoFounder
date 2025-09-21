@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AutoFounder Web3 Glassmorphism Design System */
+
+@layer base {
+  :root {
+    /* Web3 Color Palette */
+    --background: 228 100% 4%;
+    --foreground: 210 100% 98%;
+
+    /* Glassmorphism Cards */
+    --glass-bg: 228 50% 8%;
+    --glass-border: 210 50% 20%;
+    --glass-foreground: 210 100% 98%;
+
+    /* Web3 Gradient Colors */
+    --neon-blue: 213 100% 60%;
+    --neon-purple: 280 100% 70%;
+    --neon-teal: 180 100% 60%;
+    --neon-pink: 320 100% 70%;
+
+    /* Primary Brand Colors */
+    --primary: 213 100% 60%;
+    --primary-glow: 213 100% 70%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary Colors */
+    --secondary: 228 50% 12%;
+    --secondary-foreground: 210 100% 98%;
+
+    /* Accent Colors */
+    --accent: 280 100% 70%;
+    --accent-glow: 280 100% 80%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Teal Accent */
+    --teal: 180 100% 60%;
+    --teal-glow: 180 100% 70%;
+
+    /* Card Variants */
+    --card: 228 50% 8%;
+    --card-foreground: 210 100% 98%;
+    --card-border: 210 50% 20%;
+
+    /* Input & Form Elements */
+    --input: 228 50% 10%;
+    --input-border: 210 50% 25%;
+    --ring: 213 100% 60%;
+
+    /* Muted Elements */
+    --muted: 228 30% 15%;
+    --muted-foreground: 210 40% 70%;
+
+    /* Border & Dividers */
+    --border: 210 50% 20%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Popover */
+    --popover: 228 50% 8%;
+    --popover-foreground: 210 100% 98%;
+
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.37);
+    
+    /* Border Radius */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Gradients */
+    --gradient-main: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)), hsl(var(--neon-teal)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--glass-bg) / 0.4), hsl(var(--glass-bg) / 0.1));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-text: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)));
+
+    /* Backdrop Blur */
+    --blur-sm: blur(8px);
+    --blur-md: blur(16px);
+    --blur-lg: blur(24px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary/20;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-lg;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+
+  /* Glassmorphism utilities */
+  .glass-effect {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Selection styles */
+  ::selection {
+    @apply bg-primary/30 text-primary-foreground;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}
