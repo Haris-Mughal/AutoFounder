@@ -6,23 +6,47 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    product: [
-      { name: "Features", href: "#features" },
-      { name: "Demo", href: "#demo" },
-      { name: "Sponsors", href: "#sponsors" },
-      { name: "About", href: "#about" },
-    ],
-    resources: [
-      { name: "Documentation", href: "#", icon: FileText },
-      { name: "GitHub", href: "#", icon: Github },
-      { name: "Contact", href: "#", icon: Mail },
-      { name: "Discord", href: "#", icon: MessageCircle },
-    ],
-    social: [
-      { name: "LinkedIn", href: "#", icon: Linkedin },
-      { name: "Twitter", href: "#", icon: Twitter },
-      { name: "GitHub", href: "#", icon: Github },
-    ],
+      product: [
+          { name: "Features", href: "#features" },
+          { name: "Demo", href: "#demo" },
+          { name: "Sponsors", href: "#sponsors" },
+          { name: "About", href: "#about" },
+      ],
+      resources: [
+          { name: "Documentation", href: "#", icon: FileText },
+          {
+              name: "GitHub",
+              href: "https://github.com/Haris-Mughal/AutoFounder",
+              icon: Github,
+          },
+          {
+              name: "Contact",
+              href: "mailto:harismirza3456@gmail.com",
+              icon: Mail,
+          },
+          {
+              name: "Discord",
+              href: "https://discord.com/users/770216498613452801",
+              icon: MessageCircle,
+          },
+      ],
+      social: [
+          {
+              name: "LinkedIn",
+              href: "https://www.linkedin.com/in/iamharisahsan/",
+              icon: Linkedin,
+          },
+          {
+              name: "Twitter",
+              href: "https://x.com/iamharisahsan",
+              icon: Twitter,
+          },
+          {
+              name: "GitHub",
+              href: "https://github.com/Haris-Mughal",
+              icon: Github,
+          },
+      ],
   };
 
   return (
